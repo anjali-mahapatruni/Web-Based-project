@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .output {
+      margin-top: 20px;
+      background: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Basic Web App</h1>
+    <input type="text" id="userInput" placeholder="Type something..." />
+    <button onclick="handleClick()">Submit</button>
+    <div class="output" id="outputArea">Your output will appear here.</div>
+  </div>
+
+  <script>
+    function handleClick() {
+      const input = document.getElementById("userInput").value;
+      const output = document.getElementById("outputArea");
+      output.textContent = "You entered: " + input;
+    }
+  </script>
+</body>
+</html>
